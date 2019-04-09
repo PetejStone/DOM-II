@@ -24,9 +24,58 @@
   @media @mobile {
     width: 100%;
   }
-  
+
   &:hover {
     background: @white;
     color: @button-bg;
+  }
+}
+
+// Mixins in here
+.link-reset(@color) {
+  text-decoration: none;
+  list-style-type: none;
+  color: @color;
+}
+
+@desktop: ~"(min-width: 800px)";
+
+.flexy(
+  @disp: flex,
+  @dir: null,
+  @wrap: null,
+  @just: null,
+	@ai: null) {
+  display: @disp;
+  flex-direction: @dir;
+  flex-wrap: @wrap;
+  justify-content: @just;
+	align-items: @ai;
+
+}
+
+.btn-styles(@background-color: #fff, @font-color: #fff, @width, @height ){
+  background-color: @background-color;
+  color: @font-color;
+  width: @width;
+  height: @height;
+  border-radius: 5px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.center() {
+  margin: 0 auto;
+}
+
+.pulse() {
+  animation-name: pulse;
+  animation-duration: .2s;
+  @keyframes pulse {
+    0%   {transform: scale(1);}
+    25%  {transform: scale(1.01);}
+    50%  {transform: scale(1.05);}
+    75%  {transform: scale(1.01);}
+    100% {transform: scale(1);}
   }
 }
