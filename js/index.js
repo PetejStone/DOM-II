@@ -12,9 +12,10 @@ const footer = document.querySelector('footer');
 ///1. click event listener
 //Navigation 'active' functionality.
 for (let i=0; i < navItem.length; i++) {
-  let activeIcon = navItem[i].nextElementSibling; //selects active icon
-  navItem[i].addEventListener('click',()=> { //adds click listener to nav links
 
+  let activeIcon = navItem[i].nextElementSibling; //selects active icon
+  navItem[i].addEventListener('click',(e)=> { //adds click listener to nav links
+        e.preventDefault();
     for (let i=0; i < hide.length; i ++) { //loops through all icons and turns their active stylings 'off'
       hide[i].className = 'hide';
       navItem[i].className = 'navItem';
