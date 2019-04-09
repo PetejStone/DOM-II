@@ -54,12 +54,30 @@ form.addEventListener('submit', (e)=> {
   overlay.style.display = 'none';
 });
 
-button.forEach(btn => addEventListener('click', (e)=> {
-  overlay.style.display = 'flex';
-
-
-}));
+button.forEach(btn => btn.addEventListener('click',()=> overlay.style.display = 'flex'))
 
 cancel.addEventListener('click', (e)=> {
   overlay.style.display = 'none';
 });
+
+
+//5. dbl click event listener
+
+imgList.forEach(item => item.addEventListener('dblclick',()=>{
+   item.style.display = "none";
+   item.insertAdjacentHTML('afterend', '<button class="goback">Make Image Come Back</button>');
+
+   const goback = Array.from(document.querySelectorAll('.goback'));
+   goback.forEach(btn => btn.addEventListener('click', ()=>{
+     item.style.display = 'block';
+     btn.style.display = 'none';
+   }))
+}));
+
+///
+
+
+// 6. reset event listener
+form.addEventListener('reset', ()=> {
+  alert('Your form was reset');
+})

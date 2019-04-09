@@ -392,7 +392,8 @@ select {
   height: 4rem;
   width: 85%;
 }
-button[id='cancel'] {
+button[id='cancel'],
+button[id='reset'] {
   height: 4em;
   width: 85%;
   background-color: gray;
@@ -401,6 +402,9 @@ button[id='cancel'] {
   border-radius: 5px;
   margin-top: 5px;
   cursor: pointer;
+}
+button[id='reset'] {
+  background-color: red;
 }
 .overlay {
   position: fixed;
