@@ -32,13 +32,36 @@
         width: 100%;
         justify-content: space-around;
       }
-      
-      
+
+
       a {
         font-size: 1.6rem;
         color: @font-color;
         text-decoration: none;
+
       }
     }
   }
 } // .main-navigation
+
+// .selected {
+//   display: black;
+//   margin: 0 auto;
+//   height: 5px;
+//   width: 5px;
+//   background-color: #000;
+//   border-radius: 50%;
+//   opacity: 0;
+// }
+
+.active-link {
+  color: black;
+  font-weight: bold;
+}
+.active {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: black;
+  margin: 0 auto;
+}

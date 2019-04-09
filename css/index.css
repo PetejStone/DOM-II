@@ -215,6 +215,17 @@ img {
   color: #212529;
   text-decoration: none;
 }
+.active-link {
+  color: black;
+  font-weight: bold;
+}
+.active {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: black;
+  margin: 0 auto;
+}
 .footer {
   width: 100%;
   border-top: 2px dashed #C0C0C0;
@@ -350,3 +361,4 @@ img {
   background: #FFFFFF;
   color: #17A2B8;
 }
+/*# sourceMappingURL=index.css.map */
