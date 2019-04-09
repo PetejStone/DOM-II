@@ -8,7 +8,7 @@ const button = Array.from(document.querySelectorAll('.btn'));
 const cancel = document.querySelector('#cancel');
 const form = document.querySelector('form');
 const heading = document.querySelector('h1');
-
+const footer = document.querySelector('footer');
 ///1. click event listener
 //Navigation 'active' functionality.
 for (let i=0; i < navItem.length; i++) {
@@ -90,9 +90,15 @@ form.addEventListener('reset', ()=> {
 
 // 8. scroll event listener
 
-window.addEventListener('scroll', ()=> {
-  console.log('scrolliong');
-})
 
-//9. animationend event listener
-// heading.addEventListener('animationend',()=> console.log('You made me rotate'));
+
+//9. resize event listener
+window.addEventListener('resize', ()=> {
+  if (window.innerWidth < 500) {
+    alert('Warning, content may not fit')
+  }
+});
+
+//10 scroll event listener
+let counter = 0;
+window.addEventListener('scroll',()=> console.log(`You have scrolled ${counter += 1} times`));
