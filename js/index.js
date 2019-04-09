@@ -7,7 +7,7 @@ const overlay = document.querySelector('.overlay');
 const button = Array.from(document.querySelectorAll('.btn'));
 const cancel = document.querySelector('#cancel');
 const form = document.querySelector('form');
-
+const heading = document.querySelector('h1');
 
 ///1. click event listener
 //Navigation 'active' functionality.
@@ -54,14 +54,20 @@ form.addEventListener('submit', (e)=> {
   overlay.style.display = 'none';
 });
 
-button.forEach(btn => btn.addEventListener('click',()=> overlay.style.display = 'flex'))
+button.forEach(btn => btn.addEventListener('click',()=> {overlay.style.display = 'flex';
+// 5. timeout listener, form disappears after 15 seconds.
+  let timer = setTimeout(function(){
+    alert('You have taken too long. Please try again.')
+    overlay.style.display = 'none';
+  },15000)
+}));
 
 cancel.addEventListener('click', (e)=> {
   overlay.style.display = 'none';
 });
 
 
-//5. dbl click event listener
+//6. dbl click event listener
 
 imgList.forEach(item => item.addEventListener('dblclick',()=>{
    item.style.display = "none";
@@ -77,7 +83,16 @@ imgList.forEach(item => item.addEventListener('dblclick',()=>{
 ///
 
 
-// 6. reset event listener
+// 7. reset event listener
 form.addEventListener('reset', ()=> {
   alert('Your form was reset');
 })
+
+// 8. scroll event listener
+
+window.addEventListener('scroll', ()=> {
+  console.log('scrolliong');
+})
+
+//9. animationend event listener
+// heading.addEventListener('animationend',()=> console.log('You made me rotate'));
