@@ -20,8 +20,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+
+
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -105,10 +105,80 @@
         width: 80%;
         margin: 0 auto 30px;
       }
-      
+
       .btn {
-        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);     
+        .button-creator(200px, 45px, @button-bg, @white, 1.8rem);
       }
     }
   }
 }// home
+///form stylings
+
+input {
+  height: 4rem;
+  width: 85%;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+label {
+  text-align: left;
+  width: 85%;
+  font-size: 1.6rem;
+}
+input[type='submit'] {
+  background-color: limegreen;
+  color: white;
+  height: 3em;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+
+textarea {
+  width: 85%;
+  font-size: 1.6rem;
+}
+
+select {
+  height: 4rem;
+  width: 85%;
+}
+
+button[id='cancel'],
+button[id='reset'] {
+  height: 4em;
+  width: 85%;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+
+}
+
+button[id='reset'] {
+  background-color: red;
+}
+
+
+.overlay {
+  position: fixed;
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+  z-index: 2000;
+  background-color: rgba(204, 230, 255, .9);
+  top: 0;
+  display: none;
+  justify-content: center;
+  display: none;
+}
+.application {
+  .flexy(flex, column, null, center, center);
+  width: 90%;
+  margin: 0 auto;
+
+}

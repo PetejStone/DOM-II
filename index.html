@@ -22,14 +22,14 @@
     <div class="container nav-container">
       <h1 class="logo-heading">Fun Bus</h1>
       <nav class="nav">
-        <a class="nav-link" href="#">Home</a>
-        <a class="nav-link" href="#">About Us</a>
-        <a class="nav-link" href="#">Blog</a>
-        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link" href="#">Home<div class="hide" ></div></a>
+        <a class="nav-link" href="#">About Us<div class="hide"></div></a>
+        <a class="nav-link" href="#">Blog<div class="hide"></div></a>
+        <a class="nav-link" href="#">Contact<div class="hide"></div></a>
       </nav>
     </div>
   </header>
-     
+
   <div class="container home">
     <header class="intro">
       <img src="img/fun-bus.jpg" alt="bus in the sand">
@@ -39,7 +39,7 @@
     <section class="content-section">
       <div class="text-content">
         <h2>Let's Go!</h2>
-        <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p> 
+        <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p>
         <p>Expedition colorful design simple excursion blogger blogger design WordPress design, design organized website theme.</p>
       </div>
       <div class="img-content">
@@ -52,10 +52,10 @@
       </div>
       <div class="text-content">
         <h2>Adventure Awaits</h2>
-        <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p> 
+        <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p>
         <p>Expedition colorful design simple excursion blogger blogger design WordPress design, design organized website theme.</p>
       </div>
-     
+
     </section>
     <section class="content-destination">
       <h2>Pick Your Destination</h2>
@@ -82,6 +82,44 @@
     </section>
   </div><!-- container -->
 
+<!-- Form -->
+  <div class="overlay">
+    <form class="application" action="index.html" method="post">
+          <h2>Sign Up!</h2>
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" name="user_firstname" autocomplete="off" required>
+
+          <label for="last-name">Last Name:</label>
+          <input type="text" id="last-name" name="user_lastname" autocomplete="off" required>
+
+          <label for="dob">DOB:</label>
+          <input type="date" id="dob" name="user_dob" autocomplete="off"  required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="user_email" autocomplete="off" required>
+
+          <label for="phone">Phone:</label>
+          <input type="number" id="phone" name="user_phone" autocomplete="off" required>
+
+          <label for="position">What Are You Interested In?</label>
+          <select id="position" name="user_position" autocomplete="off"  >
+
+              <option value="">Fun in the Sun</option>
+              <option value="">Mountain Excursion</option>
+              <option value="">Island Getaway</option>
+
+
+          </select>
+          <label for="resume">Tell Us About Yourself:</label>
+          <textarea name="user_resume" id="resume" rows="8" cols="80" autocomplete="off" required></textarea>
+
+          <input  id="submit" type="submit" name="Submit" value="Submit">
+          <button type="reset" name="button" id="reset">Reset</button>
+          <button type="button" name="cancel" id="cancel">Cancel</button>
+        </form>
+  </div>
+
+<!--End of Form  -->
   <footer class="footer">
     <p>Copyright Fun Bus 2018</p>
   </footer>
